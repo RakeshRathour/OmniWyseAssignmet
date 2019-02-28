@@ -1,18 +1,19 @@
-package com.omniwyse.task.ReadExcelFormat;
+package com.omniwyse.task.ReadingExcelFileStoreSeparateTable;
+
+import java.util.Date;
 
 public class LogInLogOut {
-
-	private String dates;
+	private Date dates;
 	private String employeeId;
-	private String outTime;
-	private String inTime;
+	private String employeeName;
+	private Date inTime;
+	private Date outTime;
 
-	
-	public String getDates() {
+	public Date getDates() {
 		return dates;
 	}
 
-	public void setDates(String dates) {
+	public void setDates(Date dates) {
 		this.dates = dates;
 	}
 
@@ -24,26 +25,34 @@ public class LogInLogOut {
 		this.employeeId = employeeId;
 	}
 
-	public String getInTime() {
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public Date getInTime() {
 		return inTime;
 	}
 
-	public void setInTime(String inTime) {
-		this.inTime = inTime;
+	public void setInTime(Date finalInTimeDate) {
+		this.inTime = finalInTimeDate;
 	}
 
-	public String getOutTime() {
+	public Date getOutTime() {
 		return outTime;
 	}
 
-	public void setOutTime(String outTime) {
+	public void setOutTime(Date outTime) {
 		this.outTime = outTime;
 	}
 
 	@Override
 	public String toString() {
-		return "LogInLogOut [dates=" + dates + ", employeeId=" + employeeId + ", outTime=" + outTime + ", inTime="
-				+ inTime + "]";
+		return "LogInLogOut [dates=" + dates + ", employeeId=" + employeeId + ", employeeName=" + employeeName
+				+ ", inTime=" + inTime + ", outTime=" + outTime + "]";
 	}
 
 	
